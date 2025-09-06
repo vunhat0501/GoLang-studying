@@ -85,3 +85,15 @@ Two strings can be [concatenated](https://www.w3schools.com/python/python_string
 ### Assignment
 
 Using simple basic authentication for the Textio API (see in chapter-1-introduction/lesson10). This is how our users will communicate to us who they are and how many features they are paying for with each request to our API.
+
+## Lesson 12: Go programs are easy on memory
+
+Go programs are fairly lightweight. Each program include a small amount of "extra" code that's included in the executable library. This extra code is called the [Go Runtime](https://pkg.go.dev/runtime). One of the purposes of Go runtime is to cleaned up unused memory at runtime.
+
+In other words, the Go compiler includes a small amount of extra logic in every GO program to make it easier to for developers to write code that's memory efficient.
+
+### Comparison
+
+As a general rule Java programs use _more_ memory than comparable to Go programs because Go doesn't use an entire virtual machine to run its programs, just a small run time. The Go runtime is small enough that it is included directly in each Go program's compiled machine code.
+
+As another general rule Rust and C++ programs use slightly _les_ memory than Go programs because more control is given to the developer to optimize memory usage of the program. The Go runtime just handles it for us automatically.
